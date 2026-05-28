@@ -1,40 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Dub Edition VLC: club automovilístico de Valencia. Rutas, eventos, comunidad y cultura del motor.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<title>Únete</title>
+<script defer src="script.js"></script>
+<title>Únete | Dub Edition VLC</title>
 </head>
-
 <body>
+<header class="site-header">
+  <a href="index.html" class="brand" aria-label="Dub Edition inicio">
+    <span class="brand-mark">DUB</span>
+    <span class="brand-text">EDITION</span>
+  </a>
+  <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+  <nav class="main-nav" aria-label="Navegación principal">
+    <a class="" href="index.html">Inicio</a><a class="" href="rutas.html">Rutas</a><a class="" href="eventos.html">Eventos</a><a class="" href="comunidad.html">Comunidad</a><a class="active" href="unete.html">Únete</a>
+  </nav>
+</header>
 
-<h1 style="text-align:center;padding:40px;">ÚNETE AL CLUB</h1>
+<main>
+<section class="page-hero unete-bg reveal">
+  <p class="eyebrow">Únete a Dub Edition</p>
+  <h1>Dos formas de entrar en el movimiento.</h1>
+  <p>Colaboraciones para empresas y solicitud para formar parte del club.</p>
+</section>
+<section class="section tabs reveal">
+  <div class="tab-buttons" role="tablist">
+    <button class="tab-btn active" data-tab="empresa" type="button">Empresa / colaboración</button>
+    <button class="tab-btn" data-tab="club" type="button">Formar parte del club</button>
+  </div>
+  <div class="form-note">
+    <strong>Importante:</strong> GitHub Pages no guarda formularios por sí solo. Esta web deja los formularios preparados. Para recibirlos de verdad, conecta Formspree, Netlify Forms o Google Forms siguiendo el README.
+  </div>
+  <section id="empresa" class="tab-panel active">
+    <form class="form-card" action="" method="POST">
+      <h2>Colaboraciones con empresas</h2>
+      <p>Cuéntanos quién eres, qué marca representas y qué propuesta tienes para Dub Edition.</p>
+      <label>Nombre de empresa<input name="empresa" type="text" placeholder="Nombre de la empresa" required></label>
+      <label>Representante<input name="representante" type="text" placeholder="Nombre y apellidos" required></label>
+      <label>Número de teléfono<input name="telefono" type="tel" placeholder="+34 ..." required></label>
+      <label>Email<input name="email" type="email" placeholder="correo@empresa.com" required></label>
+      <label>Web<input name="web" type="url" placeholder="https://..." ></label>
+      <label>Mensaje<textarea name="mensaje" rows="7" placeholder="Explícanos qué tipo de colaboración te gustaría plantear..." required></textarea></label>
+      <button class="btn btn-primary" type="submit">ENVIAR PROPUESTA</button>
+    </form>
+  </section>
+  <section id="club" class="tab-panel">
+    <form class="form-card" action="" method="POST" enctype="multipart/form-data">
+      <h2>Formar parte del club</h2>
+      <p>Envíanos tus datos y una pequeña descripción de tu coche. Puedes subir máximo 2 fotos.</p>
+      <label>Nombre<input name="nombre" type="text" placeholder="Tu nombre" required></label>
+      <label>Número<input name="numero" type="tel" placeholder="+34 ..." required></label>
+      <label>Instagram<input name="instagram" type="text" placeholder="@usuario" required></label>
+      <label>Marca<input name="marca" type="text" placeholder="BMW, Audi, Mercedes..." required></label>
+      <label>Modelo<input name="modelo" type="text" placeholder="Serie 4, Golf GTI, A3..." required></label>
+      <label>Modificaciones<textarea name="modificaciones" rows="7" placeholder="Cuéntanos qué lleva tu coche: estética, llantas, suspensión, escape, stage, interior..." required></textarea></label>
+      <label>Fotos del coche<input id="carPhotos" name="fotos" type="file" accept="image/*" multiple></label>
+      <p class="small-text">Máximo 2 fotos. El navegador avisará si seleccionas más.</p>
+      <button class="btn btn-primary" type="submit">ENVIAR SOLICITUD</button>
+    </form>
+  </section>
+</section>
+<section class="section cta reveal">
+  <p class="eyebrow">Hashtag oficial</p><h2>#seguimosenlonuestro</h2><p>Úsalo cuando publiques contenido relacionado con Dub Edition.</p>
+</section>
+</main>
 
-<h2 style="text-align:center;">COLABORACIONES EMPRESAS</h2>
-
-<form style="max-width:600px;margin:auto;display:flex;flex-direction:column;gap:10px;">
-<input placeholder="Nombre empresa">
-<input placeholder="Representante">
-<input placeholder="Teléfono">
-<input placeholder="Email">
-<input placeholder="Web">
-<textarea placeholder="Cuéntanos tu propuesta"></textarea>
-<button class="btn">ENVIAR</button>
-</form>
-
-<hr style="margin:50px;">
-
-<h2 style="text-align:center;">FORMAR PARTE DEL CLUB</h2>
-
-<form style="max-width:600px;margin:auto;display:flex;flex-direction:column;gap:10px;">
-<input placeholder="Nombre">
-<input placeholder="Número">
-<input placeholder="Instagram">
-<input placeholder="Marca coche">
-<input placeholder="Modelo">
-<textarea placeholder="Modificaciones"></textarea>
-<input type="file" multiple>
-<button class="btn">ENVIAR</button>
-</form>
-
+<footer class="site-footer reveal">
+  <div>
+    <p class="eyebrow">DUB EDITION VLC</p>
+    <h2>Seguimos en lo nuestro.</h2>
+    <p>Rutas, eventos, comunidad y cultura del motor desde Valencia.</p>
+  </div>
+  <div class="footer-links">
+    <a href="https://www.instagram.com/dubeditionvlc" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.instagram.com/channel/AbYgdCJDxc26Cs2u/?igsh=MzJocHFnZHQ5ZnM3" target="_blank" rel="noopener">Canal</a>
+    <a href="unete.html">Únete</a>
+  </div>
+</footer>
 </body>
 </html>
